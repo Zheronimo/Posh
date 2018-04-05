@@ -1,0 +1,71 @@
+.footer 
+	padding-top: 100px
+	padding-bottom: 65px
+	background-color: #3a3a3a
+	color: #fff
+	text-align: center
+	.container 
+		position: relative
+.footer__menu
+	display: flex
+	justify-content: center
+	align-items: center
+	margin-bottom: 60px
+.footer__menu_item 
+	a 
+		color: #ffffff
+		font-size: 14px
+		text-transform: uppercase
+		+shift()
+		&:hover
+			color: $main-color
+			text-decoration: underline	
+.footer__menu_item 
+	margin-right: 30px
+	&:last-child
+		margin-right: 0
+.footer__social
+	display: flex
+	justify-content: center
+	align-items: center
+	margin-top: 15px
+	&_item 
+		margin-right: 20px
+		position: relative
+		&::before
+			position: absolute
+			bottom: 0
+			content: ''
+			display: none
+			width: 100%
+			height: 2px
+			background: rgba(169,169,169, 0.5)
+		&::after
+			position: absolute
+			top: 50%
+			transform: translate(0, -50%)
+			right: -13px
+			content: '/'
+			display: inline-block
+		&:hover.footer__social_item::before
+			display: block 
+		&:last-child
+			margin-right: 0
+		&:last-child::after
+			display: none
+	&_item a 
+		color: #fff
+		line-height: 24px
+.footer__goToTop
+	position: absolute
+	top: 87%
+	right: 5%
+	color: #fff
+	&::after
+		content: ''
+		display: none
+		width: 100%
+		height: 2px
+		background: rgba(169,169,169, 0.5)
+	&:hover.footer__goToTop::after 
+		display: block

@@ -1,0 +1,50 @@
+.blog 
+    text-align: center
+    background-color: #f7f7f7
+.blog__list
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 70px
+.blog__list_item                
+    margin-right: 45px
+    
+    &:last-child
+        margin-right: 0
+    a:hover
+        color: $main-color
+        +shift()
+    a.active
+        color: $main-color
+
+.blog__post
+    margin-bottom: 20px
+    text-align: left
+    &_img
+        margin-bottom: 25px
+        img
+            width: 100%
+            +shift()
+            &:hover
+                box-shadow: 10px 10px 1px $main-color
+    &_descr
+        margin-bottom: 15px
+        +rem(18)
+        line-height: 30px
+        color: #525252
+        text-transform: capitalize
+    &_author
+        color: #9e9e9e
+        +rem(16)
+        line-height: 20px
+        text-transform: capitalize
+.blog__btn
+    margin-top: 70px
+    .btn
+        color: #3a3a3a
+        border-color: $text-color
+        cursor: pointer
+        &:hover
+            color: $main-color
+            border-color: $main-color
+            background: none
